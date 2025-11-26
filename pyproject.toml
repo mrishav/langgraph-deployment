@@ -9,9 +9,6 @@ readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
 
-# Only production/runtime dependencies go here.
-# DO NOT include langgraph-cli or anything with extras.
-[project]
 dependencies = [
     "langgraph>=1.0.0",
     "python-dotenv>=1.0.1",
@@ -32,14 +29,13 @@ packages = ["langgraph.templates.agent", "agent"]
 [tool.setuptools.package-data]
 "*" = ["py.typed"]
 
-# Ruff config (safe to keep — no runtime impact)
 [tool.ruff]
 lint.select = [
-    "E",    # pycodestyle
-    "F",    # pyflakes
-    "I",    # isort
-    "D",    # pydocstyle
-    "D401", # First line should be in imperative mood
+    "E",
+    "F",
+    "I",
+    "D",
+    "D401",
     "T201",
     "UP",
 ]
@@ -47,7 +43,7 @@ lint.select = [
 lint.ignore = [
     "UP006",
     "UP007",
-    "UP035", # allow typing_extensions
+    "UP035",
     "D417",
     "E501",
 ]
