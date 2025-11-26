@@ -11,9 +11,11 @@ requires-python = ">=3.10"
 
 # Only production/runtime dependencies go here.
 # DO NOT include langgraph-cli or anything with extras.
+[project]
 dependencies = [
     "langgraph>=1.0.0",
     "python-dotenv>=1.0.1",
+    "langchain-openai>=0.1.0"
 ]
 
 [build-system]
